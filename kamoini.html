@@ -134,6 +134,10 @@ main{max-width:1280px;margin:0 auto;padding-inline:var(--gut);padding-block:56px
 .whyp{background:var(--accent);color:var(--on);padding:24px;display:flex;flex-direction:column;gap:16px}
 .whyp .m{color:inherit}
 .whyp .src{margin-top:auto}
+.logrow{display:flex;align-items:center;gap:8px 20px;flex-wrap:wrap;margin-top:28px}
+.logb{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;background:var(--ink);color:var(--white);font:400 13px/1 var(--mono);text-decoration:none;white-space:nowrap}
+.logb:hover{background:var(--deep)}
+.logb:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 html:has(.modal[open]){overflow:hidden}
 @keyframes fade{from{opacity:0}to{opacity:1}}
 @keyframes wipe{from{clip-path:inset(100% 0 0 0);transform:translateY(40px)}to{clip-path:inset(0 0 0 0);transform:none}}
@@ -170,6 +174,7 @@ html:has(.modal[open]){overflow:hidden}
   .mhd{grid-template-columns:48px minmax(0,1fr);gap:16px}
   .mtop{grid-column:1 / -1;flex-direction:row;justify-content:space-between;align-items:center;align-self:auto}
   .dials{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .logb{width:100%;justify-content:center}
   .pr{grid-template-columns:52px minmax(0,1fr);gap:4px 12px;padding:12px 8px}
   .pr .cue{grid-column:2}
   .b,.by,.fixes p{font-size:18px;line-height:24px}
@@ -260,6 +265,7 @@ html:has(.modal[open]){overflow:hidden}
       <div class="in1">
         <div class="dials"><div class="cell"><span class="m">coffee</span><span class="d num">20</span><span class="m unit">g</span></div><div class="cell"><span class="m">water</span><span class="d num">320</span><span class="m unit">g</span></div><div class="cell"><span class="m">ratio</span><span class="d num">1:16</span></div><div class="cell"><span class="m">temp</span><span class="d num">88</span><span class="m unit">°C</span></div><div class="cell"><span class="m">grind</span><span class="d num">5.1</span><span class="m unit">ode 2</span></div><div class="cell"><span class="m">paper</span><span class="b strong">Cafec Abaca</span></div></div>
         <div class="pours"><div class="m sec">the pours · bar = water in so far · dark = this pour</div><ol><li class="pr"><span class="bar" style="width: 0.0%"></span><span class="bar add" style="left: 0.0%; width: 12.5%"></span><span class="b num t">0:00</span><span class="b num amt"><b>+40 g</b><span class="m"> → 40 g</span></span><span class="b cue">Bloom</span></li><li class="pr"><span class="bar" style="width: 12.5%"></span><span class="bar add" style="left: 12.5%; width: 31.2%"></span><span class="b num t">0:30</span><span class="b num amt"><b>+100 g</b><span class="m"> → 140 g</span></span><span class="b cue">Heavy spiral</span></li><li class="pr"><span class="bar" style="width: 43.8%"></span><span class="bar add" style="left: 43.8%; width: 18.8%"></span><span class="b num t">0:50</span><span class="b num amt"><b>+60 g</b><span class="m"> → 200 g</span></span><span class="b cue">Spiral</span></li><li class="pr"><span class="bar" style="width: 62.5%"></span><span class="bar add" style="left: 62.5%; width: 18.8%"></span><span class="b num t">1:20</span><span class="b num amt"><b>+60 g</b><span class="m"> → 260 g</span></span><span class="b cue">Spiral</span></li><li class="pr"><span class="bar" style="width: 81.2%"></span><span class="bar add" style="left: 81.2%; width: 18.8%"></span><span class="b num t">1:40</span><span class="b num amt"><b>+60 g</b><span class="m"> → 320 g</span></span><span class="b cue">Spiral</span></li><li class="pr ev"><span class="b num t">3:40</span><span class="m amt">—</span><span class="b cue">Drain finishes</span></li></ol></div>
+        <div class="logrow"><a class="logb" href="https://claude.ai/artifact/HxPExuBkQWJCU6463vbmhg#log?r=onyx-kenya-kamunyaka-aa&amp;coffee=Kamoini&amp;ode=5.1" target="_blank" rel="noopener">Log this brew <span aria-hidden="true">→</span></a><span class="m">Opens Brew Lab with this coffee, recipe and grind filled in.</span></div>
       </div>
       <aside class="whyp in2">
         <div class="m">why this recipe</div>
@@ -281,6 +287,7 @@ html:has(.modal[open]){overflow:hidden}
       <div class="in1">
         <div class="dials"><div class="cell"><span class="m">coffee</span><span class="d num">10</span><span class="m unit">g</span></div><div class="cell"><span class="m">water</span><span class="d num">163</span><span class="m unit">g</span></div><div class="cell"><span class="m">ratio</span><span class="d num">1:16.3</span></div><div class="cell"><span class="m">temp</span><span class="d num">93</span><span class="m unit">°C</span></div><div class="cell"><span class="m">grind</span><span class="d num">4</span><span class="m unit">ode 2</span></div><div class="cell"><span class="m">paper</span><span class="b strong">Sibarist Z1 FAST</span></div></div>
         <div class="pours"><div class="m sec">the pours · bar = water in so far · dark = this pour</div><ol><li class="pr"><span class="bar" style="width: 0.0%"></span><span class="bar add" style="left: 0.0%; width: 30.7%"></span><span class="b num t">0:00</span><span class="b num amt"><b>+50 g</b><span class="m"> → 50 g</span></span><span class="b cue">Fast bloom through the dish</span></li><li class="pr"><span class="bar" style="width: 30.7%"></span><span class="bar add" style="left: 30.7%; width: 69.3%"></span><span class="b num t">0:30</span><span class="b num amt"><b>+113 g</b><span class="m"> → 163 g</span></span><span class="b cue">One slow pour, 2–3 ml/s</span></li><li class="pr ev"><span class="b num t">2:00</span><span class="m amt">—</span><span class="b cue">Drain to a flat bed</span></li></ol></div>
+        <div class="logrow"><a class="logb" href="https://claude.ai/artifact/HxPExuBkQWJCU6463vbmhg#log?r=quan-orea-z1-10g-clarity&amp;coffee=Kamoini&amp;ode=4" target="_blank" rel="noopener">Log this brew <span aria-hidden="true">→</span></a><span class="m">Opens Brew Lab with this coffee, recipe and grind filled in.</span></div>
       </div>
       <aside class="whyp in2">
         <div class="m">why this recipe</div>
@@ -302,6 +309,7 @@ html:has(.modal[open]){overflow:hidden}
       <div class="in1">
         <div class="dials"><div class="cell"><span class="m">coffee</span><span class="d num">30</span><span class="m unit">g</span></div><div class="cell"><span class="m">water</span><span class="d num">220</span><span class="m unit">g</span></div><div class="cell"><span class="m">ratio</span><span class="d num">1:7.3</span></div><div class="cell"><span class="m">temp</span><span class="d num">92</span><span class="m unit">°C</span></div><div class="cell"><span class="m">grind</span><span class="d num">6.2</span><span class="m unit">ode 2</span></div><div class="cell"><span class="m">paper</span><span class="b strong">Sibarist B3 disc</span></div></div>
         <div class="pours"><div class="m sec">the pours · bar = water in so far · dark = this pour</div><ol><li class="pr"><span class="bar" style="width: 0.0%"></span><span class="bar add" style="left: 0.0%; width: 45.5%"></span><span class="b num t">0:00</span><span class="b num amt"><b>+100 g</b><span class="m"> → 100 g</span></span><span class="b cue">Inverted, pour 100 g in 10 s</span></li><li class="pr ev"><span class="b num t">0:10</span><span class="m amt">—</span><span class="b cue">Stir firmly 20 times</span></li><li class="pr ev"><span class="b num t">0:20</span><span class="m amt">—</span><span class="b cue">Cap on, press the air out</span></li><li class="pr ev"><span class="b num t">0:40</span><span class="m amt">—</span><span class="b cue">Flip, press everything out</span></li><li class="pr"><span class="bar" style="width: 45.5%"></span><span class="bar add" style="left: 45.5%; width: 54.5%"></span><span class="b num t">then</span><span class="b num amt"><b>+120 g</b><span class="m"> → 220 g</span></span><span class="b cue">Add 120 g water, cool to ~60 °C</span></li></ol></div>
+        <div class="logrow"><a class="logb" href="https://claude.ai/artifact/HxPExuBkQWJCU6463vbmhg#log?r=wendelien-van-bunnik-wac-2019&amp;coffee=Kamoini&amp;ode=6.2" target="_blank" rel="noopener">Log this brew <span aria-hidden="true">→</span></a><span class="m">Opens Brew Lab with this coffee, recipe and grind filled in.</span></div>
       </div>
       <aside class="whyp in2">
         <div class="m">why this recipe</div>
