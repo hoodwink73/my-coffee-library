@@ -76,6 +76,9 @@ main{max-width:1280px;margin:0 auto;padding-inline:var(--gut);padding-block:56px
 .ic{width:72px;height:72px;color:var(--ink)}
 .ic svg{width:100%;height:100%;display:block}
 .meta{display:flex;flex-direction:column;gap:4px;min-width:0}
+.cold{margin-top:72px;padding:32px 24px 8px;background:var(--hover);border-top:2px dashed var(--ink)}
+.cold .cwhy{margin-top:10px;max-width:820px;color:var(--soft)}
+.cold .rows{margin-top:56px}
 .go{min-height:48px;padding:0 22px;border:0;background:var(--ink);color:var(--white);font:400 13px/1 var(--mono);cursor:pointer;white-space:nowrap}
 .go:hover{background:var(--deep)}
 .sec-cup{border-top:2px solid var(--ink);padding-top:24px;display:grid;grid-template-columns:260px minmax(0,1fr);gap:48px}
@@ -134,10 +137,6 @@ main{max-width:1280px;margin:0 auto;padding-inline:var(--gut);padding-block:56px
 .whyp{background:var(--accent);color:var(--on);padding:24px;display:flex;flex-direction:column;gap:16px}
 .whyp .m{color:inherit}
 .whyp .src{margin-top:auto}
-.logrow{display:flex;align-items:center;gap:8px 20px;flex-wrap:wrap;margin-top:28px}
-.logb{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;background:var(--ink);color:var(--white);font:400 13px/1 var(--mono);text-decoration:none;white-space:nowrap}
-.logb:hover{background:var(--deep)}
-.logb:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 html:has(.modal[open]){overflow:hidden}
 @keyframes fade{from{opacity:0}to{opacity:1}}
 @keyframes wipe{from{clip-path:inset(100% 0 0 0);transform:translateY(40px)}to{clip-path:inset(0 0 0 0);transform:none}}
@@ -160,6 +159,7 @@ html:has(.modal[open]){overflow:hidden}
   .hp-band{display:block}
   main{gap:56px}
   .rows{margin-top:40px}
+  .cold{margin-top:56px;padding:24px 16px 4px;margin-inline:-16px}
   .rowhd{grid-template-columns:48px minmax(0,1fr)}
   .ic{width:48px;height:48px}
   .rowhd .meta{grid-column:1 / -1;grid-row:auto}
@@ -174,11 +174,15 @@ html:has(.modal[open]){overflow:hidden}
   .mhd{grid-template-columns:48px minmax(0,1fr);gap:16px}
   .mtop{grid-column:1 / -1;flex-direction:row;justify-content:space-between;align-items:center;align-self:auto}
   .dials{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .logb{width:100%;justify-content:center}
   .pr{grid-template-columns:52px minmax(0,1fr);gap:4px 12px;padding:12px 8px}
   .pr .cue{grid-column:2}
   .b,.by,.fixes p{font-size:18px;line-height:24px}
 }
+.logrow{display:flex;align-items:center;gap:8px 20px;flex-wrap:wrap;margin-top:28px}
+.logb{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;background:var(--ink);color:var(--white);font:400 13px/1 var(--mono);text-decoration:none;white-space:nowrap}
+.logb:hover{background:var(--deep)}
+.logb:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media (max-width:699px){.logb{width:100%;justify-content:center}}
 </style>
 <header class="hd-band" aria-label="Tootsie Roll Gesha">
   <div class="hd top">
@@ -230,6 +234,18 @@ html:has(.modal[open]){overflow:hidden}
     <button type="button" class="go" data-open="r2" aria-haspopup="dialog">Brew this <span aria-hidden="true">→</span></button>
   </div>
 </article></div>
+  <div class="cold" role="group" aria-labelledby="h-cold">
+    <h3 class="kick" id="h-cold">+ also good cold</h3>
+    <p class="b cwhy">A natural or fermented coffee: its fruit carries well cold, and cold brew comes out softer and less sour than the hot cup. Hoffmann and roasters such as Naivo brew coffees like this as cold brew.</p>
+    <div class="rows"><article class="card"><div class="tab">cold brew · good candidate</div>
+  <div class="rowhd">
+    <div class="ic"><svg viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M42 8 H78 V18 H42 Z"/><path d="M44 18 C30 26 30 36 30 44 V104 C30 108 34 112 38 112 H82 C86 112 90 108 90 104 V44 C90 36 90 26 76 18"/><path d="M52 18 V84 H68 V18" stroke-width="1.3"/><path d="M30 60 H90" stroke-width="1.3"/></g></svg></div>
+    <h3 class="d">Room-temperature cold brew<span class="by">Naivo Coffee Company</span></h3>
+    <div class="meta"><span class="m ink">Hario Mizudashi</span><span class="m">50 g · 275 g · 25 °C · ode 9.0 · 18 h</span></div>
+    <button type="button" class="go" data-open="r3" aria-haspopup="dialog">Brew this <span aria-hidden="true">→</span></button>
+  </div>
+</article></div>
+  </div>
 </section>
 <section class="sec-cup" aria-labelledby="h-cup">
   <div><h2 class="kick" id="h-cup">03 · if the first cup is…</h2><p class="mm">One change per brew.<br>Numbers are for the suggested recipe.</p></div>
@@ -316,6 +332,28 @@ html:has(.modal[open]){overflow:hidden}
         <div><div class="m">picked for</div><div class="b strong">a cone, cooler water, many pours</div></div>
         <p class="b">ONA wrote this for a fermented Sidra with orange notes: five equal pulses at a moderate 90 °C. Cooler and more pours than either other pick, so it tests whether a gentler extraction tames the ferment. Pulse times are spaced for the drain (estimate) and the grind is estimated.</p>
         <div class="m src">ONA Coffee per-lot brew guide · grade B</div>
+      </aside>
+    </div>
+  </div>
+</dialog>
+<dialog class="modal" id="r3" aria-labelledby="r3-t">
+  <div class="mwrap">
+    <div class="mhd">
+      <div class="ic"><svg viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M42 8 H78 V18 H42 Z"/><path d="M44 18 C30 26 30 36 30 44 V104 C30 108 34 112 38 112 H82 C86 112 90 108 90 104 V44 C90 36 90 26 76 18"/><path d="M52 18 V84 H68 V18" stroke-width="1.3"/><path d="M30 60 H90" stroke-width="1.3"/></g></svg></div>
+      <h2 class="d" id="r3-t">Room-temperature cold brew<span class="by">Naivo Coffee Company</span></h2>
+      <div class="mtop"><span class="m ink">Hario Mizudashi</span><button type="button" class="x" data-close>close <span aria-hidden="true">✕</span></button></div>
+    </div>
+    <div class="mbody">
+      <div class="in1">
+        <div class="dials"><div class="cell"><span class="m">coffee</span><span class="d num">50</span><span class="m unit">g</span></div><div class="cell"><span class="m">water</span><span class="d num">275</span><span class="m unit">g</span></div><div class="cell"><span class="m">ratio</span><span class="d num">1:5.5</span></div><div class="cell"><span class="m">temp</span><span class="d num">25</span><span class="m unit">°C</span></div><div class="cell"><span class="m">grind</span><span class="d num">9.0</span><span class="m unit">ode 2</span></div><div class="cell"><span class="m">paper</span><span class="b strong">Mizudashi mesh</span></div></div>
+        <div class="pours"><div class="m sec">the pours · bar = water in so far · dark = this pour</div><ol><li class="pr"><span class="bar" style="width: 0.0%"></span><span class="bar add" style="left: 0.0%; width: 100.0%"></span><span class="b num t">0:00</span><span class="b num amt"><b>+275 g</b><span class="m"> → 275 g</span></span><span class="b cue">Wet every ground, one gentle stir</span></li><li class="pr ev"><span class="b num t">0:05</span><span class="m amt">—</span><span class="b cue">Lid on, leave at room temperature</span></li><li class="pr ev"><span class="b num t">18 h</span><span class="m amt">—</span><span class="b cue">Lift the filter, dilute to taste</span></li></ol></div>
+        <div class="logrow"><a class="logb" href="https://claude.ai/artifact/HxPExuBkQWJCU6463vbmhg#log?r=naivo-ratnagiri-culture-naturals-strawberry-cold-brew&amp;coffee=Tootsie%20Roll%20Gesha&amp;ode=9.0" target="_blank" rel="noopener">Log this brew <span aria-hidden="true">→</span></a><span class="m">Opens Brew Lab with this coffee, recipe and grind filled in.</span></div>
+      </div>
+      <aside class="whyp in2">
+        <div class="m">why this recipe</div>
+        <div><div class="m">cold brew matched on</div><div class="b strong">same roast · fermented · sweet</div></div>
+        <p class="b">Naivo&#x27;s own spec for a culture-fermented Indian natural: a long room-temperature steep that keeps ferment sweet rather than boozy. It&#x27;s a concentrate with no stated dilution, so start 1:1 with water or ice and adjust.</p>
+        <div class="m src">Naivo product page · grade B · grind H</div>
       </aside>
     </div>
   </div>
